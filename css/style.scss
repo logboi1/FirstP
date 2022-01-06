@@ -11,6 +11,12 @@
 
 
  $box-shadow: 0.5rem 1 rem rgba(0,0,0,.7); 
+ 
+ @mixin grid($val) {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minimax($val, 1fr));
+     gap: 1rem;
+ }
 
 
 
@@ -54,6 +60,7 @@ html{
     section{
         padding: 5rem 9%;
     }
+
 
     .btn{
         display: inline-block;
@@ -234,6 +241,101 @@ html{
         
     }
     
+
+    .skills{
+
+        .box-container{
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+
+
+            .box{
+                flex: 1 1 42rem;
+                padding: 2rem;
+                border-radius: .5rem;
+                text-align: center;
+                background: #0d0d0d;
+                box-shadow: $box-shadow;
+                
+                img{
+                    height: 20rem;
+                    margin-bottom: 1rem;
+                    
+                }
+
+                h3{
+                    color: white;
+                    font-size: 1.7rem;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+
+    .portfolio{
+       // padding: 5rem;
+       text-align: center;
+
+        .box-container{
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            
+            .box{
+                flex: 1;
+                padding: 2rem;
+                border-radius: .7rem;
+                text-align: center;
+                background: #0d0d0d;
+                box-shadow: $box-shadow;
+                transition: .2s linear;
+    
+                img{
+                    height: 20rem;
+                    margin-bottom: 1rem;
+                }
+
+                .content{
+                    position:flex;
+                        top: 0;left: 0;
+                        //background: #0d0d0d;
+                        //height: 20rem;
+                        display: flex;
+                        flex-flow: column;
+                   
+                    h3{
+                        color: white;
+                        font-size: 2rem;
+                        font-weight: normal; 
+                    }
+
+                    p{
+                        color: #a0a0a0;
+                        font-size: 1.7rem;
+                    }
+
+                    a{
+                        font-size: 1.5rem;
+                        font-weight: normal;
+                        color: crimson;
+
+                        &:hover{
+                            font-size: 2rem;
+                        }
+                    }
+
+                   
+                }
+
+                &:hover{
+                    background: #353434;
+                }
+            }
+        }
+    }
    
 
 
