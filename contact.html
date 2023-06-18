@@ -65,6 +65,7 @@
 
       <div>
         <button onclick="redirectWhatsApp()">Contact via WhatsApp</button>
+        <button onclick="redirectTelegram()">Contact via Telegram</button>
       </div>
     </section>
 
@@ -75,6 +76,9 @@
   <script>
     function redirectWhatsApp() {
       window.location.href = 'https://api.whatsapp.com/send?phone=2348109019750';
+    }
+    function redirectTelegram() {
+      window.location.href = 'https://t.me/Logboi';
     }
   </script>
   </body>
